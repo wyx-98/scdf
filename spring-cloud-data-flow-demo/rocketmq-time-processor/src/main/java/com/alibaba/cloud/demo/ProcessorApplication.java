@@ -32,7 +32,7 @@ import org.springframework.integration.annotation.Transformer;
 @SpringBootApplication
 public class ProcessorApplication {
 
-	@Transformer(inputChannel = "input1", outputChannel = "output1")
+	@Transformer(inputChannel = "input", outputChannel = "output")
 	public Object transform(Long date) {
 		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		return dateFormat.format(date);

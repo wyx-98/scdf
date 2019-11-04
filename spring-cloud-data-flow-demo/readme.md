@@ -20,10 +20,10 @@ stream create --name log-data --definition 'source-app | processor-app |sink-app
 Deploys(input it in freetext in spring cloud dataflow dashboard):
 
 ```properties
-app.source-app.spring.cloud.stream.bindings.output1.destination=scdf-log-source
-app.processor-app.spring.cloud.stream.bindings.output1.destination=scdf-log-processor
-app.processor-app.spring.cloud.stream.bindings.input1.destination=scdf-log-source
-app.processor-app.spring.cloud.stream.bindings.input1.group=scdf-log-source-group
-app.sink-app.spring.cloud.stream.bindings.input1.destination=scdf-log-processor
-app.sink-app.spring.cloud.stream.bindings.input1.group=scdf-log-processor-group
+app.source-app.spring.cloud.stream.bindings.output.destination=scdf-log-source
+app.processor-app.spring.cloud.stream.bindings.output.destination=scdf-log-processor
+app.processor-app.spring.cloud.stream.bindings.input.destination=scdf-log-source
+app.processor-app.spring.cloud.stream.bindings.input.group=scdf-log-source-group
+app.sink-app.spring.cloud.stream.bindings.input.destination=scdf-log-processor
+app.sink-app.spring.cloud.stream.bindings.input.group=scdf-log-processor-group
 ```

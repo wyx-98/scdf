@@ -33,7 +33,7 @@ public class SinkApplication {
 
     private static Logger logger = LoggerFactory.getLogger(SinkApplication.class);
 
-    @StreamListener("input1")
+    @StreamListener("input")
     public void loggerSink(String date) {
         logger.info("Received: " + date);
     }

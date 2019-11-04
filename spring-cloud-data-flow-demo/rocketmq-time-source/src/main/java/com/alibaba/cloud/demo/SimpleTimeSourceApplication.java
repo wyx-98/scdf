@@ -36,7 +36,7 @@ import org.springframework.integration.support.MessageBuilder;
 public class SimpleTimeSourceApplication {
 
 	@Bean
-	@InboundChannelAdapter(value = "output1", poller = @Poller(fixedDelay = "10000", maxMessagesPerPoll = "1"))
+	@InboundChannelAdapter(value = "output", poller = @Poller(fixedDelay = "10000", maxMessagesPerPoll = "1"))
 	public MessageSource<Long> timeMessageSource() {
 		return () -> MessageBuilder.withPayload(new Date().getTime()).build();
 	}
